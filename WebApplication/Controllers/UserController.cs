@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Heisen.Core.Abstraction;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
-using WebApplication.Models;
 
 namespace WebApplication.Controllers
 {
@@ -14,18 +7,16 @@ namespace WebApplication.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-        public UserController(IConfiguration configuration)
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            _configuration = configuration;
+            _userService = userService;
         }
 
         [HttpGet]
         public JsonResult Get()
         {
-            MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("HeisenAppCon"));
-            var allUsers = dbClient.GetDatabase("heisendb").GetCollection<User>("Users").AsQueryable();
-            return new JsonResult(allUsers);
+            return new JsonResult(_userService.Get());
         }
     }
 }
