@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WebApplication.Models;
+using Heisen.Core.Models;
 
 namespace Heisen.Core.Abstraction
 {

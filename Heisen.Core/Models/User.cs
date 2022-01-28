@@ -1,16 +1,17 @@
 ﻿using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace WebApplication.Models
+namespace Heisen.Core.Models
 {
     public class User
     {
-        public ObjectId Id { get; set; }
+        public ObjectId _id { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
+        public IEnumerable<UserPartner> UserPartners { get; set; }
+        public decimal Percentage { get; set; }
+
     }
 }

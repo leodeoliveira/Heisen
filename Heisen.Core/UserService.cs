@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
-using WebApplication.Models;
+using Heisen.Core.Models;
 
 namespace Heisen.Core
 {
