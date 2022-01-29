@@ -10,8 +10,8 @@ namespace Heisen.Core.Models
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
-        public IEnumerable<UserPartner> UserPartners { get; set; }
+        public List<UserPartner> UserPartners { get; set; }
         public decimal Percentage { get; set; }
-
+        public string[] Privilegies { get; set; }
     }
 }

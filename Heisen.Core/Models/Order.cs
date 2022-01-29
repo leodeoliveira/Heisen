@@ -7,7 +7,8 @@ namespace Heisen.Core.Models
     {
         public ObjectId _id { get; set; }
         public int OrderId { get; set; }
-        public string ClienteName { get; set; }
+        public string ClientName { get; set; }
+        public Client Client { get; set; }
         public List<Service> Services { get; set; }
         public List<Product> Products { get; set; }
         public List<Beverage> Beverages { get; set; }
