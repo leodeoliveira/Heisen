@@ -1,4 +1,5 @@
 ﻿using Heisen.Core.Abstraction;
+using Heisen.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication.Controllers
@@ -17,6 +18,24 @@ namespace WebApplication.Controllers
         public JsonResult Get()
         {
             return new JsonResult(_userService.Get());
+        }
+
+        [HttpPost]
+        public JsonResult Add(User user)
+        {
+            return new JsonResult(_userService.Add(user));
+        }
+
+        [HttpPut]
+        public JsonResult Put(User user)
+        {
+            return new JsonResult(_userService.Update(user));
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult Delete(int id)
+        {
+            return new JsonResult(_userService.Delete(id));
         }
     }
 }
