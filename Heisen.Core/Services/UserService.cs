@@ -74,5 +74,10 @@ namespace Heisen.Core
             user.isActive = false;
             return Update(user);
         }
+
+        public bool ValidateUserCredentials(string username, string password)
+        {
+            return _users.Find(u => u.Username.Equals(username) && u.Password.Equals(password)).CountDocuments() > 0;
+        }
     }
 }

@@ -13,5 +13,7 @@ namespace Heisen.Core.Models
         public decimal Percentage { get; set; }
         public string[] Privilegies { get; set; }
         public bool isActive { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -37,5 +37,11 @@ namespace WebApplication.Controllers
         {
             return new JsonResult(_userService.Delete(id));
         }
+
+        [HttpPost]
+        public JsonResult ValidateUserCredentials(string username, string password)
+        {
+            return new JsonResult(_userService.ValidateUserCredentials(username, password));
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Heisen.Core.Abstraction
         string Update(User user);
         string Delete(int id);
         User GetById(int id);
+        bool ValidateUserCredentials(string username, string password);
     }
 }
