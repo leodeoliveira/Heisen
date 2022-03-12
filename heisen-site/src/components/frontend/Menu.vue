@@ -11,9 +11,12 @@
                 <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
                 <div id="sidebar-menu">
                 <ul class="sidebar-links" id="simple-bar">
-                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="/frontend/theme/index.html" target="_blank"><i data-feather="home"></i><span>Dashboard</span></a></li>
-                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
-                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="/frontend/document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation                                    </span></a></li>
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="/frontend/theme/index.html" target="_blank"><i data-feather="home"></i><span>Comandas</span></a></li>
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Barbeiros</span></a></li>
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Clientes</span></a></li>
+                    <li class="sidebar-list"><router-link class="sidebar-link sidebar-title" :to="{ name: 'Product' }" target="_blank"><i data-feather="headphones"></i><span>Produtos</span></router-link></li>
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="/frontend/document/index.html" target="_blank"><i data-feather="file-text"></i><span>Serviços</span></a></li>
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="/">Teste</a></li>
                 </ul>
                 </div>
                 <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
