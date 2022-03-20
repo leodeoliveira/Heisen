@@ -1,5 +1,6 @@
 <template>
-<div class="col-sm-12">
+<div class="page-body">
+    <div class="col-sm-12">
     <div class="card">
         <div class="card-header">
         <h5>Últimas comandas</h5>
@@ -62,7 +63,9 @@
         </table>
         </div>
     </div>
+    </div>
 </div>
+
 </template>
 
 <script>

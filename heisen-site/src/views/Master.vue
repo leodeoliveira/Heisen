@@ -6,10 +6,11 @@
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
         <header-section></header-section>
-        <menu-section></menu-section>    
-        <router-view></router-view>
-        
-        <footer-section></footer-section>
+        <div class="page-body-wrapper">
+            <menu-section></menu-section>    
+            <router-view></router-view>
+            <footer-section></footer-section>
+        </div>
     </div>
 
 </template>
@@ -25,7 +26,12 @@ export default {
         HeaderSection,
         FooterSection,
         MenuSection,
-    }
+    },
+    mounted() {
+    let localScripts = document.createElement('script');
+    localScripts.setAttribute('src', 'frontend/assets/js/sidebar-menu.js');
+    document.head.appendChild(localScripts)
+  },
 
 };
 </script>
