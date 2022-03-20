@@ -1,5 +1,5 @@
 <template>
-  <Master></Master>
+    <Master />
 </template>
 
 <script>
