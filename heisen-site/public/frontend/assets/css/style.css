@@ -16579,7 +16579,7 @@ footer {
     margin-top: 15px; } }
 
 @media only screen and (max-width: 360px) {
-  .browse .browse-articles ul li a span:nth-child(2) {
+  .browse .browse-articles ul li router-link span:nth-child(2) {
     width: 158px;
     white-space: nowrap;
     overflow: hidden;
@@ -19853,7 +19853,7 @@ body.dark-only {
     background-color: #262932; }
     body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-link.active svg {
       stroke: var(--theme-deafult); }
-    body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+    body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
       color: rgba(235, 235, 235, 0.7); }
     body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
       stroke: rgba(235, 235, 235, 0.7); }
@@ -19871,7 +19871,7 @@ body.dark-only {
       background-color: rgba(235, 235, 235, 0.2); }
     body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a {
       color: rgba(235, 235, 235, 0.7); }
-    body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span {
+    body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span {
       color: rgba(235, 235, 235, 0.7); }
     body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active {
       color: var(--theme-deafult); }
@@ -19902,7 +19902,7 @@ body.dark-only {
     background: #262932; }
   body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li .sidebar-title {
     border-bottom: 1px solid #374558; }
-  body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+  body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
     color: rgba(235, 235, 235, 0.7); }
   body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
     stroke: rgba(235, 235, 235, 0.7); }
@@ -19928,7 +19928,7 @@ body.dark-only {
     background-color: rgba(235, 235, 235, 0.2); }
   body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a {
     color: rgba(235, 235, 235, 0.7); }
-  body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span {
+  body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span {
     color: rgba(235, 235, 235, 0.7); }
   body.dark-only .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active {
     color: var(--theme-deafult); }
@@ -22458,7 +22458,7 @@ body.dark-sidebar .page-wrapper .sidebar-main-title p {
 
 body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper {
   background-color: #262932; }
-  body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+  body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
     color: rgba(235, 235, 235, 0.7); }
   body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
     stroke: rgba(235, 235, 235, 0.7); }
@@ -22476,7 +22476,7 @@ body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-w
     background-color: rgba(235, 235, 235, 0.2); }
   body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a {
     color: rgba(235, 235, 235, 0.7); }
-  body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span {
+  body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span {
     color: rgba(235, 235, 235, 0.7); }
   body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active {
     color: var(--theme-deafult); }
@@ -22513,7 +22513,7 @@ body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-w
 body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li .sidebar-title {
   border-bottom: 1px solid #374558; }
 
-body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
   color: rgba(235, 235, 235, 0.7); }
 
 body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
@@ -22547,7 +22547,7 @@ body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-w
 body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a {
   color: rgba(235, 235, 235, 0.7); }
 
-body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span {
+body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span {
   color: rgba(235, 235, 235, 0.7); }
 
 body.dark-sidebar .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active {
@@ -24909,7 +24909,7 @@ body[class*='dark-'] .for-light {
         .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-link::before {
           right: 20px;
           left: unset; }
-        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li a span {
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li router-link span {
           display: none; }
         .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main .sidebar-links .sidebar-list .sidebar-title.active ~ .sidebar-submenu {
           display: none; }
@@ -24930,7 +24930,7 @@ body[class*='dark-'] .for-light {
       margin-bottom: 30px; }
       .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a {
         font-weight: 500; }
-        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
           letter-spacing: 0.7px;
           font-family: Roboto;
           text-transform: capitalize;
@@ -25173,7 +25173,7 @@ body[class*='dark-'] .for-light {
     stroke: var(--theme-deafult); }
   .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper {
     background-color: #262932; }
-    .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li a span, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+    .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
       color: rgba(235, 235, 235, 0.7); }
     .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li a svg, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
       stroke: rgba(235, 235, 235, 0.7); }
@@ -25191,7 +25191,7 @@ body[class*='dark-'] .for-light {
         stroke: var(--theme-deafult); }
     .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a {
       color: rgba(235, 235, 235, 0.7); }
-    .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a span {
+    .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li router-link span {
       color: rgba(235, 235, 235, 0.7); }
     .page-wrapper.compact-wrapper.dark-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active, .page-wrapper.compact-wrapper.color-sidebar div.sidebar-wrapper .sidebar-main .sidebar-links .sidebar-list ul.sidebar-submenu li a.active {
       color: var(--theme-deafult); }
@@ -25270,7 +25270,7 @@ body[class*='dark-'] .for-light {
       overflow: auto; }
       .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a {
         color: #2c323f; }
-        .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
+        .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li router-link span {
           letter-spacing: 0.7px;
           font-family: Roboto;
           text-transform: capitalize;
