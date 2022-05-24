@@ -26,6 +26,7 @@ namespace WebApplication
             services.AddTransient<IServiceService, ServiceService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IMovementService, MovementService>();
+            services.AddTransient<IPriceTableService, PriceTableService>();
 
             services.AddCors(c => { 
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); 

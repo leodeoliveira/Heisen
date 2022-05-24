@@ -13,19 +13,22 @@ namespace Heisen.Core
 
         private readonly IMongoCollection<Order> _orders;
         private readonly IMovementService _movementService;
+        private readonly IServiceService _serviceService;
 
-        public OrderService(IConfiguration configuration, IUserService userService, IMovementService movementService)
+        public OrderService(IConfiguration configuration, IUserService userService, IMovementService movementService, IServiceService serviceService)
         {
             DatabaseService dbService = new DatabaseService(configuration);
             MongoClient _dbClient = dbService.GetConnectionString();
             _orders = _dbClient.GetDatabase("heisendb").GetCollection<Order>("Orders");
             _movementService = movementService;
+            _serviceService = serviceService;
         }
 
         public string Add(Order order)
         {
             try
             {
+                order.Services = UpdateServicePriceByPriceTable(order);
                 _orders.InsertOne(order);
                 return "OK";
             }
@@ -35,6 +38,18 @@ namespace Heisen.Core
             }
         }
 
+        private List<Service> UpdateServicePriceByPriceTable(Order order)
+        {
+            List<Service> newListService = new List<Service>();
+            foreach (Service item in order.Services)
+                newListService.Add(new Service()
+                {
+                    Name = item.Name,
+                    Price = _serviceService.GetServicePriceByTable(item.Name, item.PriceTableId)
+                });
+
+            return newListService;
+        }
 
         public string Cancel(int id)
         {
@@ -68,7 +83,7 @@ namespace Heisen.Core
             try
             { 
                 UpdateStatus(order);
-                PrepareMovements(order);
+                SaveMovements(order);
                 return "OK";
             }
             catch (Exception e)
@@ -77,33 +92,16 @@ namespace Heisen.Core
             }
         }
 
-        private void PrepareMovements(Order order)
+        private void SaveMovements(Order order)
+        {
+            AddServiceMovement(order);
+            AddProductMovement(order);
+            AddUserPartnetMovement(order);
+        }
+
+        private void AddUserPartnetMovement(Order order)
         {
             decimal totalOrderService = order.Services.Sum(s => s.Price);
-            Movement movementService = new Movement()
-            {
-                UserId = order.User.UserId,
-                Order = order,
-                Total = (totalOrderService * order.User.Percentage) / 100,
-                MovementDate = DateTime.Now,
-                Type = MovementType.Services
-            };
-            _movementService.Add(movementService);
-
-            if (order.Products.Count > 0)
-            {
-                decimal totalOrderProduct = order.Products.Sum(s => s.Price);
-                Movement movementProduct = new Movement()
-                {
-                    UserId = order.User.UserId,
-                    Order = order,
-                    Total = (totalOrderProduct * 10) / 100,
-                    MovementDate = DateTime.Now,
-                    Type = MovementType.Products
-                };
-                _movementService.Add(movementProduct);
-            }
-
             foreach (UserPartner partner in order.User.UserPartners)
             {
                 decimal totalValue = (totalOrderService * partner.Percentage) / 100;
@@ -117,6 +115,37 @@ namespace Heisen.Core
                 };
                 _movementService.Add(movement);
             }
+        }
+
+        private void AddProductMovement(Order order)
+        {
+            if (order.Products == null || order.Products.Count == 0)
+                return;
+
+            decimal totalOrderProduct = order.Products.Sum(s => s.Price);
+            Movement movementProduct = new Movement()
+            {
+                UserId = order.User.UserId,
+                Order = order,
+                Total = (totalOrderProduct * 10) / 100,
+                MovementDate = DateTime.Now,
+                Type = MovementType.Products
+            };
+            _movementService.Add(movementProduct);
+        }
+
+        private void AddServiceMovement(Order order)
+        {
+            decimal totalOrderService = order.Services.Sum(s => s.Price);
+            Movement movementService = new Movement()
+            {
+                UserId = order.User.UserId,
+                Order = order,
+                Total = (totalOrderService * order.User.Percentage) / 100,
+                MovementDate = DateTime.Now,
+                Type = MovementType.Services
+            };
+            _movementService.Add(movementService);
         }
 
         private string UpdateStatus(Order order)

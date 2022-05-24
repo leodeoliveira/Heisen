@@ -21,6 +21,7 @@ namespace WebApplication.Controllers
         }
 
         [HttpPost]
+        [HttpPost, Route("add")]
         public JsonResult Add(Product Product)
         {
             return new JsonResult(_productService.Add(Product));

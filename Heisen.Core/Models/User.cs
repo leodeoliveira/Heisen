@@ -15,5 +15,6 @@ namespace Heisen.Core.Models
         public bool isActive { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public int PriceTableId { get; set; }
     }
 }

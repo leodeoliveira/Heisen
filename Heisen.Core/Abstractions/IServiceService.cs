@@ -9,5 +9,7 @@ namespace Heisen.Core.Abstraction
         string Add(Service service);
         string Update(Service service);
         Service GetById(int id);
+        decimal GetServicePriceByTable(string name, int priceTableId);
+        List<Service> GetServicesByBarberId(int barberId);
     }
 }

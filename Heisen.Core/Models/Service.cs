@@ -4,6 +4,6 @@ namespace Heisen.Core.Models
 {
     public class Service : ProductBase
     {
-        public int ServiceId { get; set; }
+        public int PriceTableId { get; set; }
     }
 }

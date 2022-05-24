@@ -21,6 +21,7 @@ namespace WebApplication.Controllers
         }
 
         [HttpPost]
+        [HttpPost, Route("Add")]
         public JsonResult Add(User user)
         {
             return new JsonResult(_userService.Add(user));
@@ -39,6 +40,7 @@ namespace WebApplication.Controllers
         }
 
         [HttpPost]
+        [HttpPost, Route("ValidateUserCredentials")]
         public JsonResult ValidateUserCredentials(string username, string password)
         {
             return new JsonResult(_userService.ValidateUserCredentials(username, password));

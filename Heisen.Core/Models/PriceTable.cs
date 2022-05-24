@@ -2,11 +2,10 @@
 
 namespace Heisen.Core.Models
 {
-    public class ProductBase
+    public class PriceTable
     {
         public ObjectId _id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int IdReference { get; set; }
+        public int PriceTableId { get; set; }
     }
 }

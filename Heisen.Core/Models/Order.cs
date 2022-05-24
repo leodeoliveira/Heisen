@@ -11,6 +11,7 @@ namespace Heisen.Core.Models
         public string ClientName { get; set; }
         public Client Client { get; set; }
         public User User { get; set; }
+        public int UserId { get; set; }
         public List<Service> Services { get; set; }
         public List<Product> Products { get; set; }
         public List<Beverage> Beverages { get; set; }
