@@ -19,8 +19,8 @@
                 </div>
             </li>
             <li class="sidebar-list"><router-link class="sidebar-link sidebar-title link-nav" to="/order"><i data-feather="dollar-sign"></i><span>Comandas</span></router-link></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="user"></i><span>Barbeiros</span></a></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="users"></i><span>Clientes</span></a></li>
+            <li class="sidebar-list"><router-link class="sidebar-link sidebar-title link-nav" to="/user"><i data-feather="user"></i><span>Barbeiros</span></router-link></li>
+            <li class="sidebar-list"><router-link class="sidebar-link sidebar-title link-nav" to="/customer"><i data-feather="users"></i><span>Clientes</span></router-link></li>
             <li class="sidebar-list"><router-link class="sidebar-link sidebar-title link-nav" to="/product"><i data-feather="file-text"></i><span>Produtos</span></router-link></li>
             <li class="sidebar-list"><router-link class="sidebar-link sidebar-title link-nav" to="/service"><i data-feather="scissors"></i><span>Serviços</span></router-link></li>
         </ul>

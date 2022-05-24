@@ -3,99 +3,46 @@
         <div class="col-sm-12">
           <div class="card">
             <div class="card-header">
-              <h5>Basic form control</h5>
+              <h5>Cadastrar produto</h5>
             </div>
-            <form class="form theme-form">
+            <form class="form theme-form" v-on:submit.prevent="submitForm">
               <div class="card-body">
                 <div class="row">
                   <div class="col">
                     <div class="mb-3">
-                      <label class="form-label" for="exampleFormControlInput1"
-                        >Email address</label
-                      >
-                      <input
-                        class="form-control"
-                        id="exampleFormControlInput1"
-                        type="email"
-                        placeholder="name@example.com"
-                      />
+                      <label class="form-label" for="Nome">Nome</label>
+                      <input class="form-control" id="exampleFormControlInput1" type="text" v-model="form.Name" />
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
                     <div class="mb-3">
-                      <label class="form-label" for="exampleInputPassword2"
-                        >Password</label
-                      >
-                      <input
-                        class="form-control"
-                        id="exampleInputPassword2"
-                        type="password"
-                        placeholder="Password"
-                      />
+                      <label class="form-label" for="exampleInputPassword2">Valor</label>
+                      <input class="form-control" id="exampleInputPassword2" type="text" v-model="form.Price"/>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
                     <div class="mb-3">
-                      <label class="form-label" for="exampleFormControlSelect9"
-                        >Example select</label
-                      >
-                      <select
-                        class="form-select digits"
-                        id="exampleFormControlSelect9"
-                      >
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                      <label class="form-label" for="exampleInputPassword2">Quantidade</label>
+                      <input class="form-control" id="exampleInputPassword2" type="number" v-model="form.Quantity"/>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col">
                     <div class="mb-3">
-                      <label class="form-label" for="exampleFormControlSelect3"
-                        >Example multiple select</label
-                      >
-                      <select
-                        class="form-select digits"
-                        id="exampleFormControlSelect3"
-                        multiple=""
-                      >
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div>
-                      <label
-                        class="form-label"
-                        for="exampleFormControlTextarea4"
-                        >Example textarea</label
-                      >
-                      <textarea
-                        class="form-control"
-                        id="exampleFormControlTextarea4"
-                        rows="3"
-                      ></textarea>
+                      <label class="form-label" for="exampleInputPassword2">Comissão de vendas</label>
+                      <input class="form-control" id="exampleInputPassword2" type="number" v-model="form.Percentage"/>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
-                <button class="btn btn-primary" type="submit">Submit</button>
-                <input class="btn btn-light" type="reset" value="Cancel" />
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <a href="product" class="btn btn-light">Cancelar</a>
               </div>
             </form>
           </div>
@@ -104,7 +51,33 @@
 </template>
 
 <script>
+import api from '../../services/api.js';
+
 export default {
   name: "ProductPage",
+  data(){
+        return{
+            form: {
+                Name: '',
+                Price: ''
+            }
+        }
+    },
+    methods:{
+        submitForm(){
+            let formData = JSON.parse(JSON.stringify(this.form));
+            console.log(formData);
+            api.post('/product/add', formData)
+                 .then(() => {
+                   alert('Produto cadastrado com sucesso.');
+                    this.$router.push('/product');
+                 })
+                 .catch((error) => {
+                     console.log(error +  "Fail");
+                 }).finally(() => {
+                     //Perform action in always
+                 });
+        }
+    }
 };
 </script>
