@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "@/views/pages/Login.vue";
+import LoginPage from "@/views/pages/Login.vue";
+import SecurePage from "@/views/pages/Secure.vue"
 import ProductForm from "@/views/pages/ProductForm.vue";
 import ServiceForm from "@/views/pages/ServiceForm.vue";
 import OrderForm from "@/views/pages/OrderForm.vue";
@@ -13,8 +14,19 @@ import CustomerList from "@/views/pages/Customer.vue";
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    redirect: {
+      name: "login"
+    }
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: LoginPage
+  },
+  {
+    path: "/secure",
+    name: "secure",
+    component: SecurePage
   },
   {
     path: "/productForm",
